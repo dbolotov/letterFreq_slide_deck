@@ -1,6 +1,6 @@
 ---
 title       : letterFreq
-subtitle    : 
+subtitle    : Developing Data Products
 author      : D Bolotov
 job         : 
 framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
