@@ -1,101 +1,74 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>letterFreq</title>
-  <meta charset="utf-8">
-  <meta name="description" content="letterFreq">
-  <meta name="author" content="D Bolotov">
-  <meta name="generator" content="slidify" />
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta http-equiv="X-UA-Compatible" content="chrome=1">
-  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
-  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
-    media="only screen and (max-device-width: 480px)" >
-  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
-  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
-  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
-
+	<meta charset='utf-8'>
+	<title>letterFreq</title>
+	<meta name="description" content="letterFreq">
+	<meta name="author" content="D Bolotov">
+	<meta name="generator" content="slidify" />
+	
+	<!-- LOAD STYLE SHEETS -->
+	<link rel="stylesheet" href="libraries/frameworks/html5slides/default/styles.css">
+	<link rel="stylesheet" href="libraries/highlighters/highlight.js/css/googlecode.css" />  <link rel="stylesheet" href = "assets/css/ribbons.css">
   
-  <!-- Grab CDN jQuery, fall back to local if offline -->
-  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
-  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
-  <script data-main="libraries/frameworks/io2012/js/slides" 
-    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
-  </script>
-  
-  
-
 </head>
-<body style="opacity: 0">
-  <slides class="layout-widescreen">
-    
-    <!-- LOGO SLIDE -->
-        <slide class="title-slide segue nobackground">
-  <hgroup class="auto-fadein">
-    <h1>letterFreq</h1>
-    <h2>Developing Data Products</h2>
-    <p>D Bolotov<br/></p>
-  </hgroup>
-  <article></article>  
-</slide>
-    
+<body style='display: none'>
+	<section class='slides layout-regular template-regular'>
+     <article class="" id="slide-1" style="background:;">
+  <h3>Slide 2</h3>
+  <p>Ever read some text and wondered what the distribution of characters looks like?</p>
 
-    <!-- SLIDES -->
-    <slide class="" id="slide-1" style="background:;">
-  <hgroup>
-    <h2>Read-And-Delete</h2>
-  </hgroup>
-  <article data-timings="">
-    <ol>
-<li>Edit YAML front matter</li>
-<li>Write using R Markdown</li>
-<li>Use an empty line followed by three dashes to separate slides!</li>
-</ol>
+</article>
 
-  </article>
-  <!-- Presenter Notes -->
-</slide>
+<article class="" id="slide-2" style="background:;">
+  <h3>Slide 3</h3>
+  <p>hey there</p>
 
-<slide class="class" id="id" style="background:;">
-  <hgroup>
-    <h2>Slide 2</h2>
-  </hgroup>
-  <article data-timings="">
-    <p>Test slide 2</p>
+</article>
 
-  </article>
-  <!-- Presenter Notes -->
-</slide>
+<article class="" id="slide-3" style="background:;">
+  <h3>Demo</h3>
+  <pre><code class="r">sanitize &lt;- function(str){
+    #input: raw text string
+    #output: relative frequencies
 
-    <slide class="backdrop"></slide>
-  </slides>
-  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
-    <ul>
-      <li>
-      <a href="#" target="_self" rel='tooltip' 
-        data-slide=1 title='Read-And-Delete'>
-         1
-      </a>
-    </li>
-    <li>
-      <a href="#" target="_self" rel='tooltip' 
-        data-slide=2 title='Slide 2'>
-         2
-      </a>
-    </li>
-  </ul>
-  </div>  <!--[if IE]>
-    <script 
-      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
-    </script>
-    <script>CFInstall.check({mode: 'overlay'});</script>
-  <![endif]-->
+    str &lt;- substr(str,1,30000)
+
+    newstr &lt;- gsub(&quot;[^[:alpha:]]&quot;, &quot;&quot;, str)
+    newstr &lt;- tolower(newstr)
+    chars &lt;- strsplit(newstr, NULL)[[1]]
+    freqs &lt;- summary(factor(chars))
+    rfreqs &lt;- freqs / sum(freqs)
+
+    return(rfreqs)
+}
+
+str &lt;- &quot;I am a test string with numeric (1234) and other non-alpha characters. (^_^)y &quot;
+
+sanitize(str)
+</code></pre>
+
+<pre><code>##       a       c       d       e       g       h       i       l       m 
+## 0.13462 0.05769 0.01923 0.07692 0.01923 0.07692 0.07692 0.01923 0.03846 
+##       n       o       p       r       s       t       u       w       y 
+## 0.09615 0.03846 0.01923 0.09615 0.05769 0.11538 0.01923 0.01923 0.01923
+</code></pre>
+
+</article>
+
+<article class="" id="slide-4" style="background:;">
+  <h3>Slide 5</h3>
+  <p>The end.</p>
+
+</article>
+
+  </section>
 </body>
-  <!-- Load Javascripts for Widgets -->
-  
-  <!-- LOAD HIGHLIGHTER JS FILES -->
-  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
-  <script>hljs.initHighlightingOnLoad();</script>
-  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
-   
-  </html>
+  <!-- LOAD JAVASCRIPTS  -->
+	<script src='libraries/frameworks/html5slides/default/slides.js'></script>
+	<!-- LOAD HIGHLIGHTER JS FILES -->
+	<script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+	<!-- DONE LOADING HIGHLIGHTER JS FILES -->
+	 
+	</html>
