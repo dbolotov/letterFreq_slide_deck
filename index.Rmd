@@ -3,29 +3,29 @@ title       : letterFreq
 subtitle    : Developing Data Products
 author      : D Bolotov
 job         : 
-framework   : html5slides    # {io2012, html5slides, shower, dzslides, ...}
-highlighter : highlight.js  # {highlight.js, prettify, highlight}
+framework   : io2012    # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.jS  # {highlight.js, prettify, highlight}
 hitheme     : googlecode          # zenburn tomorrow
 widgets     : []            # {mathjax, quiz, bootstrap}
 mode        : selfcontained # {standalone, draft}
 knit        : slidify::knit2slides
 ---
 
-## Slide 2
+## letterFreq
 
 Ever read some text and wondered what the distribution of characters looks like?
 
 ---
 
-## Slide 3
+## letterFreq
 
 hey there
 
 ---
 
-## Demo
+## letterFreq
 
-```{r}
+```{r echo=F}
 sanitize <- function(str){
     #input: raw text string
     #output: relative frequencies
@@ -40,7 +40,9 @@ sanitize <- function(str){
     
     return(rfreqs)
 }
+```
 
+```{r}
 str <- "I am a test string with numeric (1234) and other non-alpha characters. (^_^)y "
 
 sanitize(str)
@@ -49,7 +51,9 @@ sanitize(str)
 
 ---
 
-## Slide 5
+## letterFreq
+
+Link to shinyapp
 
 The end.
 

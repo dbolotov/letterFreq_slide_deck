@@ -3,8 +3,8 @@ title       : letterFreq
 subtitle    : Developing Data Products
 author      : D Bolotov
 job         : 
-framework   : html5slides    # {io2012, html5slides, shower, dzslides, ...}
-highlighter : highlight.js  # {highlight.js, prettify, highlight}
+framework   : io2012    # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.jS  # {highlight.js, prettify, highlight}
 hitheme     : googlecode          # zenburn tomorrow
 widgets     : []            # {mathjax, quiz, bootstrap}
 mode        : selfcontained # {standalone, draft}
@@ -26,22 +26,9 @@ hey there
 ## Demo
 
 
-```r
-sanitize <- function(str){
-    #input: raw text string
-    #output: relative frequencies
-    
-    str <- substr(str,1,30000)
-    
-    newstr <- gsub("[^[:alpha:]]", "", str)
-    newstr <- tolower(newstr)
-    chars <- strsplit(newstr, NULL)[[1]]
-    freqs <- summary(factor(chars))
-    rfreqs <- freqs / sum(freqs)
-    
-    return(rfreqs)
-}
 
+
+```r
 str <- "I am a test string with numeric (1234) and other non-alpha characters. (^_^)y "
 
 sanitize(str)
@@ -57,6 +44,8 @@ sanitize(str)
 ---
 
 ## Slide 5
+
+Link to shinyapp
 
 The end.
 
