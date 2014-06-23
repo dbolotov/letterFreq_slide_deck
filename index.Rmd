@@ -42,7 +42,7 @@ Let's see a demo of the histogram capabilities.
 ## letterFreq!
 
 ```{r echo=F}
-library(ggplot2)
+require(ggplot2)
 
 sanitize <- function(str){
     #input: raw text string
