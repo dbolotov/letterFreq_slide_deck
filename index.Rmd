@@ -104,7 +104,7 @@ fplot <- function(str){
 
 ```
 
-Define a test string and get frequency counts for it.
+Define a test string and get frequency counts for it:
 ```{r}
 str <- "I am a string with numeric (123) and other non-alpha (%$^#&!) characters. 
         I live in this presentation and wonder what the rest of the world is like."
@@ -122,7 +122,7 @@ sanitize(str)
 
 ## letterFreq!
 
-Starting from the raw string, plot the letter distribution.
+Plot the distribution:
 ```{r echo=TRUE, fig.height=4, fig.width=6, fig.align='center'}
 str <- "I am a string with numeric (123) and other non-alpha (%$^#&!)characters. 
         I live in this presentation and wonder what the rest of the world is like. ZzZZzzZ."

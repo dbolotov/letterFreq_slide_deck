@@ -43,7 +43,7 @@ Let's see a demo of the histogram capabilities.
 
 
 
-Define a test string and get frequency counts for it.
+Define a test string and get frequency counts for it:
 
 ```r
 str <- "I am a string with numeric (123) and other non-alpha (%$^#&!) characters. 
@@ -73,7 +73,7 @@ sanitize(str)
 
 ## letterFreq!
 
-Starting from the raw string, plot the letter distribution.
+Plot the distribution:
 
 ```r
 str <- "I am a string with numeric (123) and other non-alpha (%$^#&!)characters. 
