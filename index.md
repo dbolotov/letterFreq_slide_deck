@@ -59,7 +59,7 @@ This could use a few z's.
 
 
 ```r
-str <- "I am a string with numeric (123) and other non-alpha (%$^#&!)characters. 
+str <- "I am a string with numeric (123) and other non-alpha (%$^#&!) characters. 
         I live in this presentation and wonder what the rest of the world is like. ZzZZzzZ."
 sanitize(str)
 ```
@@ -76,7 +76,7 @@ sanitize(str)
 Plot the distribution:
 
 ```r
-str <- "I am a string with numeric (123) and other non-alpha (%$^#&!)characters. 
+str <- "I am a string with numeric (123) and other non-alpha (%$^#&!) characters. 
         I live in this presentation and wonder what the rest of the world is like. ZzZZzzZ."
 fplot(str)
 ```
