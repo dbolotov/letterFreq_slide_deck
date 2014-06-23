@@ -1,53 +1,65 @@
 ---
-title       : letterFreq
-subtitle    : Developing Data Products
+title       : letterFreq!
+subtitle    : A presentation for Developing Data Products course
 author      : D Bolotov
 job         : 
-framework   : io2012    # {io2012, html5slides, shower, dzslides, ...}
-highlighter : highlight.jS  # {highlight.js, prettify, highlight}
-hitheme     : googlecode          # zenburn tomorrow
+framework   : io2012   # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js # {highlight.js, prettify, highlight}
+hitheme     : tomorrow_edited         # zenburn tomorrow
 widgets     : []            # {mathjax, quiz, bootstrap}
 mode        : selfcontained # {standalone, draft}
 knit        : slidify::knit2slides
 ---
 
-## Slide 2
+## letterFreq!
 
 Ever read some text and wondered what the distribution of characters looks like?
 
+Whether that wall of text contains 23 a's, or 24?
+
+What the most common English letters are?
+
+
 ---
 
-## Slide 3
+## letterFreq!
 
 hey there
 
 ---
 
-## Demo
+## letterFreq!
 
 
 
+Let's define a test string, get frequency counts for it, and plot them.
 
 ```r
-str <- "I am a test string with numeric (1234) and other non-alpha characters. (^_^)y "
-
-sanitize(str)
+str <- "I am a string with numeric (123) and other non-alpha (%$^#&!)characters."
+sanitize(str) 
 ```
 
 ```
-##       a       c       d       e       g       h       i       l       m 
-## 0.13462 0.05769 0.01923 0.07692 0.01923 0.07692 0.07692 0.01923 0.03846 
-##       n       o       p       r       s       t       u       w       y 
-## 0.09615 0.03846 0.01923 0.09615 0.05769 0.11538 0.01923 0.01923 0.01923
+## a c d e g h i l m n o p r s t u w 
+## 7 3 1 3 1 4 4 1 2 5 2 1 5 2 4 1 1
 ```
+
+
 
 ---
 
-## Slide 5
+## letterFreq!
 
-Link to shinyapp
+Let's define a test string, get frequency counts for it, and plot them.
 
-The end.
+```r
+fplot(str)
+```
+
+![plot of chunk unnamed-chunk-3](assets/fig/unnamed-chunk-3.png) 
+
+Enter your own text, check other distributions, and see it in action here: [letterFreq!](https://dontpanic.shinyapps.io/letterFreq/)
+
 
 
 

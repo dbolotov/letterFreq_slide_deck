@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>letterFreq</title>
+  <title>letterFreq!</title>
   <meta charset="utf-8">
-  <meta name="description" content="letterFreq">
+  <meta name="description" content="letterFreq!">
   <meta name="author" content="D Bolotov">
   <meta name="generator" content="slidify" />
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
     media="only screen and (max-device-width: 480px)" >
   <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
-  <link rel="stylesheet" href="libraries/highlighters/highlight.jS/css/googlecode.css" />
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow_edited.css" />
   <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
 
   
@@ -32,8 +32,8 @@
     <!-- LOGO SLIDE -->
         <slide class="title-slide segue nobackground">
   <hgroup class="auto-fadein">
-    <h1>letterFreq</h1>
-    <h2>Developing Data Products</h2>
+    <h1>letterFreq!</h1>
+    <h2>A presentation for Developing Data Products course</h2>
     <p>D Bolotov<br/></p>
   </hgroup>
   <article></article>  
@@ -43,10 +43,14 @@
     <!-- SLIDES -->
     <slide class="" id="slide-1" style="background:;">
   <hgroup>
-    <h2>Slide 2</h2>
+    <h2>letterFreq!</h2>
   </hgroup>
   <article data-timings="">
     <p>Ever read some text and wondered what the distribution of characters looks like?</p>
+
+<p>Whether that wall of text contains 23 a&#39;s, or 24?</p>
+
+<p>What the most common English letters are?</p>
 
   </article>
   <!-- Presenter Notes -->
@@ -54,7 +58,7 @@
 
 <slide class="" id="slide-2" style="background:;">
   <hgroup>
-    <h2>Slide 3</h2>
+    <h2>letterFreq!</h2>
   </hgroup>
   <article data-timings="">
     <p>hey there</p>
@@ -65,18 +69,17 @@
 
 <slide class="" id="slide-3" style="background:;">
   <hgroup>
-    <h2>Demo</h2>
+    <h2>letterFreq!</h2>
   </hgroup>
   <article data-timings="">
-    <pre><code class="r">str &lt;- &quot;I am a test string with numeric (1234) and other non-alpha characters. (^_^)y &quot;
+    <p>Let&#39;s define a test string, get frequency counts for it, and plot them.</p>
 
-sanitize(str)
+<pre><code class="r">str &lt;- &quot;I am a string with numeric (123) and other non-alpha (%$^#&amp;!)characters.&quot;
+sanitize(str) 
 </code></pre>
 
-<pre><code>##       a       c       d       e       g       h       i       l       m 
-## 0.13462 0.05769 0.01923 0.07692 0.01923 0.07692 0.07692 0.01923 0.03846 
-##       n       o       p       r       s       t       u       w       y 
-## 0.09615 0.03846 0.01923 0.09615 0.05769 0.11538 0.01923 0.01923 0.01923
+<pre><code>## a c d e g h i l m n o p r s t u w 
+## 7 3 1 3 1 4 4 1 2 5 2 1 5 2 4 1 1
 </code></pre>
 
   </article>
@@ -85,12 +88,17 @@ sanitize(str)
 
 <slide class="" id="slide-4" style="background:;">
   <hgroup>
-    <h2>Slide 5</h2>
+    <h2>letterFreq!</h2>
   </hgroup>
   <article data-timings="">
-    <p>Link to shinyapp</p>
+    <p>Let&#39;s define a test string, get frequency counts for it, and plot them.</p>
 
-<p>The end.</p>
+<pre><code class="r">fplot(str)
+</code></pre>
+
+<p><img src="assets/fig/unnamed-chunk-3.png" alt="plot of chunk unnamed-chunk-3"> </p>
+
+<p>Enter your own text, check other distributions, and see it in action here: <a href="https://dontpanic.shinyapps.io/letterFreq/">letterFreq!</a></p>
 
   </article>
   <!-- Presenter Notes -->
@@ -102,25 +110,25 @@ sanitize(str)
     <ul>
       <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=1 title='Slide 2'>
+        data-slide=1 title='letterFreq!'>
          1
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=2 title='Slide 3'>
+        data-slide=2 title='letterFreq!'>
          2
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=3 title='Demo'>
+        data-slide=3 title='letterFreq!'>
          3
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=4 title='Slide 5'>
+        data-slide=4 title='letterFreq!'>
          4
       </a>
     </li>
