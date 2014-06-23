@@ -30,9 +30,9 @@ Wonder no more.
 
 LetterFreq!, a handy little app built in [Rstudio](http://www.rstudio.com/) and [Shiny](http://shiny.rstudio.com/), will take care of your letter-counting needs.
 
-The app eats any text, dirty or clean, and shows you the relative and absolute frequencies of the English letters contained therein.
+The app eats any text, dirty or clean, and shows you relative and absolute frequencies of the English letters contained therein.
 
-Optionally, the app will also plot the letter distribution from some English literature classics, or the main entries in the Oxford English dictionary, for comparison.
+Optionally, it will also plot the letter distribution from some English literature classics, or the main entries in the Oxford English dictionary, for comparison.
 
 
 Let's see a demo of the histogram capabilities.
