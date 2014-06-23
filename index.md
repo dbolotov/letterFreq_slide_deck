@@ -46,7 +46,7 @@ Let's see a demo of the histogram capabilities.
 Let's define a test string, get frequency counts for it, and plot them.
 
 ```r
-str <- "I am a string with numeric (123) and other non-alpha (%$^#&!)characters. 
+str <- "I am a string with numeric (123) and other non-alpha (%$^#&!) characters. 
         I live in this presentation and wonder what the rest of the world is like."
 sanitize(str) #clean the string and get absolute frequency counts
 ```

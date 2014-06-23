@@ -123,7 +123,7 @@ sanitize(str)
 ## letterFreq!
 
 Let's define a test string, get frequency counts for it, and plot them.
-```{r fig.height=4, fig.width=6, fig.align='center'}
+```{r echo=TRUE, fig.height=4, fig.width=6, fig.align='center'}
 fplot(str) #plot relative and absolute counts starting from the raw string
 ```
 
