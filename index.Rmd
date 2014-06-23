@@ -1,6 +1,6 @@
 ---
 title       : letterFreq!
-subtitle    : A presentation for Developing Data Products course
+subtitle    : A presentation for Developing Data Products
 author      : D Bolotov
 job         : 
 framework   : io2012   # {io2012, html5slides, shower, dzslides, ...}
@@ -17,7 +17,7 @@ Ever read something and wondered what the distribution of (English) characters l
 
 Whether that wall of text contains 153 a's, or 154?
 
-Whether your phone texts contain too many consonants?
+Whether your friend's phone texts are dangerously low on vowels?
 
 What the most common English letters are?
 
@@ -32,7 +32,7 @@ LetterFreq!, a handy little app built in [Rstudio](http://www.rstudio.com/) and 
 
 The app eats any text, dirty or clean, and shows you the relative and absolute frequencies of the English letters contained therein.
 
-Optionally, the app will also plot the letter distribution from some English literature classics, or the main entries in the Oxford English dictionary.
+Optionally, the app will also plot the letter distribution from some English literature classics, or the main entries in the Oxford English dictionary, for comparison.
 
 
 Let's see a demo of the histogram capabilities.
@@ -104,7 +104,7 @@ fplot <- function(str){
 
 ```
 
-Let's define a test string, get frequency counts for it, and plot them.
+Define a test string and get frequency counts for it.
 ```{r}
 str <- "I am a string with numeric (123) and other non-alpha (%$^#&!) characters. 
         I live in this presentation and wonder what the rest of the world is like."
@@ -122,9 +122,11 @@ sanitize(str)
 
 ## letterFreq!
 
-Let's define a test string, get frequency counts for it, and plot them.
+Starting from the raw string, plot the letter distribution.
 ```{r echo=TRUE, fig.height=4, fig.width=6, fig.align='center'}
-fplot(str) #plot relative and absolute counts starting from the raw string
+str <- "I am a string with numeric (123) and other non-alpha (%$^#&!)characters. 
+        I live in this presentation and wonder what the rest of the world is like. ZzZZzzZ."
+fplot(str)
 ```
 
 Hmm. No j, but eleven i's? And not even one b? Fascinating.

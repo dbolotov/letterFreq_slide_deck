@@ -33,7 +33,7 @@
         <slide class="title-slide segue nobackground">
   <hgroup class="auto-fadein">
     <h1>letterFreq!</h1>
-    <h2>A presentation for Developing Data Products course</h2>
+    <h2>A presentation for Developing Data Products</h2>
     <p>D Bolotov<br/></p>
   </hgroup>
   <article></article>  
@@ -50,7 +50,7 @@
 
 <p>Whether that wall of text contains 153 a&#39;s, or 154?</p>
 
-<p>Whether your phone texts contain too many consonants?</p>
+<p>Whether your friend&#39;s phone texts are dangerously low on vowels?</p>
 
 <p>What the most common English letters are?</p>
 
@@ -69,7 +69,7 @@
 
 <p>The app eats any text, dirty or clean, and shows you the relative and absolute frequencies of the English letters contained therein.</p>
 
-<p>Optionally, the app will also plot the letter distribution from some English literature classics, or the main entries in the Oxford English dictionary.</p>
+<p>Optionally, the app will also plot the letter distribution from some English literature classics, or the main entries in the Oxford English dictionary, for comparison.</p>
 
 <p>Let&#39;s see a demo of the histogram capabilities.</p>
 
@@ -82,7 +82,7 @@
     <h2>letterFreq!</h2>
   </hgroup>
   <article data-timings="">
-    <p>Let&#39;s define a test string, get frequency counts for it, and plot them.</p>
+    <p>Define a test string and get frequency counts for it.</p>
 
 <pre><code class="r">str &lt;- &quot;I am a string with numeric (123) and other non-alpha (%$^#&amp;!) characters. 
         I live in this presentation and wonder what the rest of the world is like.&quot;
@@ -113,9 +113,11 @@ sanitize(str)
     <h2>letterFreq!</h2>
   </hgroup>
   <article data-timings="">
-    <p>Let&#39;s define a test string, get frequency counts for it, and plot them.</p>
+    <p>Starting from the raw string, plot the letter distribution.</p>
 
-<pre><code class="r">fplot(str) #plot relative and absolute counts starting from the raw string
+<pre><code class="r">str &lt;- &quot;I am a string with numeric (123) and other non-alpha (%$^#&amp;!)characters. 
+        I live in this presentation and wonder what the rest of the world is like. ZzZZzzZ.&quot;
+fplot(str)
 </code></pre>
 
 <p><img src="assets/fig/unnamed-chunk-4.png" title="plot of chunk unnamed-chunk-4" alt="plot of chunk unnamed-chunk-4" style="display: block; margin: auto;" /></p>
