@@ -28,7 +28,7 @@ What the most common English letters are?
 
 Wonder no more.
 
-LetterFreq!, a handy little app built in [Rstudio](http://www.rstudio.com/) and [Shiny](http://shiny.rstudio.com/), will take care of your letter-counting needs.
+LetterFreq!, a handy little tool built in [Rstudio](http://www.rstudio.com/) and [Shiny](http://shiny.rstudio.com/), will take care of your letter-counting needs.
 
 The app eats any text, dirty or clean, and shows you relative and absolute frequencies of the English letters contained therein.
 
