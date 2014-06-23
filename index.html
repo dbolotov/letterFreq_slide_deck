@@ -46,9 +46,11 @@
     <h2>letterFreq!</h2>
   </hgroup>
   <article data-timings="">
-    <p>Ever read some text and wondered what the distribution of characters looks like?</p>
+    <p>Ever read something and wondered what the distribution of (English) characters looks like?</p>
 
-<p>Whether that wall of text contains 23 a&#39;s, or 24?</p>
+<p>Whether that wall of text contains 153 a&#39;s, or 154?</p>
+
+<p>Whether your phone texts contain too many consonants?</p>
 
 <p>What the most common English letters are?</p>
 
@@ -61,7 +63,15 @@
     <h2>letterFreq!</h2>
   </hgroup>
   <article data-timings="">
-    <p>hey there</p>
+    <p>Wonder no more.</p>
+
+<p>LetterFreq!, a handy little app built in <a href="http://www.rstudio.com/">Rstudio</a> and <a href="http://shiny.rstudio.com/">Shiny</a>, will take care of your letter-counting needs.</p>
+
+<p>The app eats any text, dirty or clean, and shows you the relative and absolute frequencies of the English letters contained therein.</p>
+
+<p>Optionally, the app will also plot the letter distribution from some English literature classics, or the main entries in the Oxford English dictionary.</p>
+
+<p>Let&#39;s see a demo of the histogram capabilities.</p>
 
   </article>
   <!-- Presenter Notes -->
@@ -74,12 +84,24 @@
   <article data-timings="">
     <p>Let&#39;s define a test string, get frequency counts for it, and plot them.</p>
 
-<pre><code class="r">str &lt;- &quot;I am a string with numeric (123) and other non-alpha (%$^#&amp;!)characters.&quot;
-sanitize(str) 
+<pre><code class="r">str &lt;- &quot;I am a string with numeric (123) and other non-alpha (%$^#&amp;!)characters. 
+        I live in this presentation and wonder what the rest of the world is like.&quot;
+sanitize(str) #clean the string and get absolute frequency counts
 </code></pre>
 
-<pre><code>## a c d e g h i l m n o p r s t u w 
-## 7 3 1 3 1 4 4 1 2 5 2 1 5 2 4 1 1
+<pre><code>##  a  c  d  e  f  g  h  i  k  l  m  n  o  p  r  s  t  u  v  w 
+## 10  3  4 11  1  1  8 11  1  4  2 10  6  2  9  6 11  1  1  4
+</code></pre>
+
+<p>This could use a few z&#39;s.</p>
+
+<pre><code class="r">str &lt;- &quot;I am a string with numeric (123) and other non-alpha (%$^#&amp;!)characters. 
+        I live in this presentation and wonder what the rest of the world is like. ZzZZzzZ.&quot;
+sanitize(str)
+</code></pre>
+
+<pre><code>##  a  c  d  e  f  g  h  i  k  l  m  n  o  p  r  s  t  u  v  w  z 
+## 10  3  4 11  1  1  8 11  1  4  2 10  6  2  9  6 11  1  1  4  7
 </code></pre>
 
   </article>
@@ -93,10 +115,12 @@ sanitize(str)
   <article data-timings="">
     <p>Let&#39;s define a test string, get frequency counts for it, and plot them.</p>
 
-<pre><code class="r">fplot(str)
+<pre><code class="r">fplot(str) #plot relative and absolute counts starting from the raw string
 </code></pre>
 
-<p><img src="assets/fig/unnamed-chunk-3.png" alt="plot of chunk unnamed-chunk-3"> </p>
+<p><img src="assets/fig/unnamed-chunk-4.png" title="plot of chunk unnamed-chunk-4" alt="plot of chunk unnamed-chunk-4" style="display: block; margin: auto;" /></p>
+
+<p>Hmm. No j, but eleven i&#39;s? And not even one b? Fascinating.</p>
 
 <p>Enter your own text, check other distributions, and see it in action here: <a href="https://dontpanic.shinyapps.io/letterFreq/">letterFreq!</a></p>
 

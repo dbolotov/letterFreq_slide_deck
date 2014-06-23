@@ -13,9 +13,11 @@ knit        : slidify::knit2slides
 
 ## letterFreq!
 
-Ever read some text and wondered what the distribution of characters looks like?
+Ever read something and wondered what the distribution of (English) characters looks like?
 
-Whether that wall of text contains 23 a's, or 24?
+Whether that wall of text contains 153 a's, or 154?
+
+Whether your phone texts contain too many consonants?
 
 What the most common English letters are?
 
@@ -24,7 +26,16 @@ What the most common English letters are?
 
 ## letterFreq!
 
-hey there
+Wonder no more.
+
+LetterFreq!, a handy little app built in [Rstudio](http://www.rstudio.com/) and [Shiny](http://shiny.rstudio.com/), will take care of your letter-counting needs.
+
+The app eats any text, dirty or clean, and shows you the relative and absolute frequencies of the English letters contained therein.
+
+Optionally, the app will also plot the letter distribution from some English literature classics, or the main entries in the Oxford English dictionary.
+
+
+Let's see a demo of the histogram capabilities.
 
 ---
 
@@ -95,20 +106,28 @@ fplot <- function(str){
 
 Let's define a test string, get frequency counts for it, and plot them.
 ```{r}
-str <- "I am a string with numeric (123) and other non-alpha (%$^#&!)characters."
-sanitize(str) 
+str <- "I am a string with numeric (123) and other non-alpha (%$^#&!) characters. 
+        I live in this presentation and wonder what the rest of the world is like."
+sanitize(str) #clean the string and get absolute frequency counts
 ```
+This could use a few z's.
 
-
+```{r}
+str <- "I am a string with numeric (123) and other non-alpha (%$^#&!)characters. 
+        I live in this presentation and wonder what the rest of the world is like. ZzZZzzZ."
+sanitize(str)
+```
 
 ---
 
 ## letterFreq!
 
 Let's define a test string, get frequency counts for it, and plot them.
-```{r fig.height=5, fig.width=7}
-fplot(str)
+```{r fig.height=4, fig.width=6, fig.align='center'}
+fplot(str) #plot relative and absolute counts starting from the raw string
 ```
+
+Hmm. No j, but eleven i's? And not even one b? Fascinating.
 
 Enter your own text, check other distributions, and see it in action here: [letterFreq!](https://dontpanic.shinyapps.io/letterFreq/)
 
